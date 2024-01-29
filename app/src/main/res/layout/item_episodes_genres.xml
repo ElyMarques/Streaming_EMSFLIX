@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="35dp"
+        android:clipToPadding="false"
+        android:background="@color/black"
+        >
+
+        <FrameLayout
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_recommended_shadow"
+                android:innerRadius="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="6dp"
+                android:shape="ring"
+                android:layout_gravity="center_horizontal"
+                android:thicknessRatio="5">
+
+
+
+                <com.coioteshd2024.util.GridItemImageView
+                    android:id="@+id/itemMovieImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="185dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom|end"
+                    android:orientation="vertical">
+
+                    <com.coioteshd2024.util.GridItemImageView
+                        android:id="@+id/info_serie"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_margin="@dimen/spacing_middle"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/image"
+                        app:srcCompat="@drawable/ic_report"
+                        app:tint="@color/white" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/seriename"
+            android:layout_width="370dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/grey_11"
+            android:fontFamily="@font/dinbold"
+            android:maxLength="70"
+            android:maxLines="1"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            tools:text="As Trapalhadas de Flapjack" />
+
+        <TextView
+            android:id="@+id/movietitle"
+            android:layout_width="370dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="29dp"
+            android:ellipsize="end"
+            android:textColor="#7E7E7E"
+            android:fontFamily="@font/dinbold"
+            android:maxLength="70"
+            android:maxLines="2"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            tools:text="Movie Title" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

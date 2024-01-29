@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="169dp"
+        android:background="@color/black"
+        android:layout_marginEnd="5dp">
+
+
+        <FrameLayout
+            android:id="@+id/cardView"
+            android:layout_width="220dp"
+            android:layout_height="120dp"
+            tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:innerRadius="5dp"
+                android:layout_marginBottom="0dp"
+                app:cardCornerRadius="5dp"
+                android:shape="ring"
+                android:thicknessRatio="5">
+
+
+                <com.coioteshd2024.util.GridItemImageView
+                    android:id="@+id/itemMovieImage"
+                    android:layout_width="220dp"
+                    android:layout_height="120dp"
+                    android:scaleType="centerCrop"
+                    />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/playbutton"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom|end"
+                    android:orientation="vertical">
+
+                    <com.coioteshd2024.util.GridItemImageView
+                        android:id="@+id/info_serie"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_margin="@dimen/spacing_middle"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/image"
+                        app:srcCompat="@drawable/ic_info"
+                        app:tint="@color/white" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/seriename"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/grid_leftright_padding"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="30dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="#DDDDDD"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintVertical_bias="0.52"
+            tools:text="As Trapalhadas de FlapJack"
+            tools:ignore="SmallSp"/>
+
+
+        <TextView
+            android:id="@+id/movietitle"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/grid_leftright_padding"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="1dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:textColor="#7A7A7A"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/seriename"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintVertical_bias="0.52"
+            tools:text="Movie Title Movie Title Movie Title Movie Title Movie Title Movie Title Movie Title"
+            tools:ignore="SmallSp"/>
+
+        <TextView
+            android:id="@+id/epoverview"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/grid_leftright_padding"
+            android:layout_marginBottom="-20dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintVertical_bias="0.52"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movietitle"
+            tools:text="10x456 Some Very Cool Episode Title Therefore10x456 Some Very Cool Episode Title Therefore10x456 Some Very Cool Episode Title Therefore"
+            tools:ignore="SmallSp" />
+
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:numStars="5"
+            android:rating="4.0"
+            android:scaleX=".9"
+            android:visibility="gone"
+            android:scaleY=".9"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toStartOf="@id/view_movie_rating"
+            app:layout_constraintTop_toBottomOf="@id/movietitle"
+            android:stepSize="0.1"
+            />
+
+
+        <TextView
+            android:id="@+id/view_movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            android:visibility="gone"
+            android:textColor="@color/bottomnavigationbgcolor"
+            android:text="@string/movie_rating"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/rating_bar"
+            app:layout_constraintTop_toBottomOf="@id/movietitle"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">70717313780-m7n0uje3971kv21fghdrptcg7pklompv.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">70717313780</string>
+    <string name="google_api_key" translatable="false">AIzaSyCpfbzi4VxfTUf2WVckZsShMHq3V8xqQyE</string>
+    <string name="google_app_id" translatable="false">1:70717313780:android:9d4dd20133bb2e875c04a1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCpfbzi4VxfTUf2WVckZsShMHq3V8xqQyE</string>
+    <string name="google_storage_bucket" translatable="false">coiotes-hd.appspot.com</string>
+    <string name="project_id" translatable="false">coiotes-hd</string>
+</resources>

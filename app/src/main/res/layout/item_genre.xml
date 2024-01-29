@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+        <LinearLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="2dp"
+            android:layout_margin="3dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:innerRadius="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="0dp"
+                    app:cardCornerRadius="5dp"
+                    android:shape="ring"
+                    android:thicknessRatio="5">
+
+                        <com.coioteshd2024.util.GridItemImageView
+                            android:id="@+id/item_movie_image"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginEnd="2dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/substitle"
+                            android:textSize="7.0sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="start"
+                            android:background="@drawable/bg_substitle"
+                            android:paddingLeft="5.0dip"
+                            android:layout_marginTop="10dp"
+                            android:paddingRight="5.0dip"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="12.0dip"
+                            android:text="qsdsd" />
+
+
+                        <TextView
+                            android:id="@+id/hasNewEpisodes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:gravity="bottom"
+                            android:layout_marginBottom="25dp"
+                            android:background="@drawable/bg_newepisodes"
+                            android:paddingStart="7dp"
+                            android:paddingTop="3dp"
+                            android:paddingEnd="7dp"
+                            android:paddingBottom="3dp"
+                            android:radius="3dp"
+                            android:text="@string/new_episodes"
+                            android:visibility="gone"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                            android:textColor="@color/grey_11"
+                            android:textSize="6sp"
+                            android:textStyle="bold"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:id="@+id/movietitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:visibility="gone"
+                            android:layout_gravity="bottom"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                            android:textColor="@color/grey_20"
+                            android:textSize="9sp"
+                            android:textStyle="bold"
+                            android:lineSpacingExtra="-5dp"
+                            android:text="@string/title"
+                            />
+
+                </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+</layout>

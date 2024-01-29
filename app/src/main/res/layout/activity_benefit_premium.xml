@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.superflixapp.BenefitPremiumActivity"
+        android:background="@drawable/upgrade_background"
+        android:orientation="vertical">
+
+
+
+
+
+        <ScrollView
+            android:id="@+id/view_plans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:background="@android:color/transparent">
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_large"
+                android:layout_marginBottom="120dp"
+                tools:ignore="MissingConstraints">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:lottie_loop="true"
+                        app:lottie_autoPlay="true"
+                        app:lottie_rawRes="@raw/premiumgold" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="34dp"
+                    android:autoLink="web"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:text="BENEFÍCIOS WARSCINE PREMIUM"
+                    android:textAlignment="center"
+                    android:textColor="#F3FFC800" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:autoLink="web"
+                    android:textSize="15sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:text="@string/benefi1"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:autoLink="web"
+                    android:textSize="15sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:text="@string/benefi2"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:autoLink="web"
+                    android:textSize="15sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:text="@string/benefi3"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:autoLink="web"
+                    android:textSize="15sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:text="@string/benefi5"
+                    android:textColor="@color/white" />
+
+                <android.widget.Button
+                    android:id="@+id/porque"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="-4dp"
+                    android:layout_marginEnd="-4dp"
+                    android:background="@drawable/btn_gradient_porque"
+                    android:text="@string/porque"
+                    android:layout_marginTop="49dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="0dp"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <android.widget.Button
+                    android:id="@+id/assinar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="-4dp"
+                    android:layout_marginEnd="-4dp"
+                    android:background="@drawable/btn_gradient_assinar"
+                    android:text="@string/quero_assinar"
+                    android:layout_marginTop="19dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:autoLink="web"
+                    android:layout_marginBottom="40dp"
+                    android:textSize="12sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:text="@string/para_assinar"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey_40" />
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_close"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/image"
+            app:tint="@color/grey_40" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

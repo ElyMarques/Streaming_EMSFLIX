@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@drawable/fragment_shadows_top"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_update_redlines"
+        tools:ignore="UselessParent">
+
+
+        <LinearLayout
+            android:id="@+id/LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/bt_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/image"
+                app:srcCompat="@drawable/ic_close"
+                app:tint="@color/grey_20" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:elevation="0dp"
+                    android:focusable="true"
+                    android:gravity="start"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center|start"
+                        android:text="escolha um plano"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="20sp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="bottom"
+                        app:srcCompat="@drawable/line_related">
+
+                    </ImageView>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LinearLayout"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_loading_subtitles_accent"></RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LinearLayout"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="180dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="20dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/swipe">
+
+            </com.airbnb.lottie.LottieAnimationView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_plans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:scrollbars="vertical"
+                    android:scrollingCache="true" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Sua assinatura com cartão de crédito será renovada automaticamente até que seja cancelada nas configurações. Cancele a qualquer momento."
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12sp">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
